@@ -5,7 +5,7 @@ let multiplaierpocet = 0; /*vlastneno ano*/
 let tlacitko = 0; /*promenna na onkeydown*/
 let multiplaier115 = 50* Math.pow(1.15,multiplaierpocet); /**/
 
-
+/*text s fotkou ucitele dat nad buttonuton*/
 
 document.addEventListener("keypress", onkeydown);
 
@@ -20,7 +20,7 @@ document.addEventListener("keypress", onkeydown);
             multiplaier115 = 50* Math.pow(1.15,multiplaierpocet);
             document.getElementById("text").innerHTML = "Máš " + Math.round(spsmb) + " SPS Kokiez";
             document.title = spsmb;
-            document.getElementById("multiplaierpocet").innerHTML = "Multiplaier 2x <br> Vlastněno: " +  multiplaierpocet;
+            document.getElementById("multiplaierpocet").innerHTML = "Multiplaier 2x <br> Vlastněno: " +  multiplaierpocet + "<br>" + "Zaplať: " + multiplaier115;
         }
     }
 
@@ -77,7 +77,7 @@ window.onload = function nacist(){
     multiplaierpocet = parseInt(multiplaierpocet);
     multiplaier115 = localStorage.getItem("multiplaier115");
     multiplaier115 = parseInt(multiplaier115);
-    document.getElementById("multiplaierpocet").innerHTML = "Multiplaier 2x <br> Vlastněno: " +  multiplaierpocet;
+    document.getElementById("multiplaierpocet").innerHTML = "Multiplaier 2x <br> Vlastněno: " +  multiplaierpocet + "<br>" + "Zaplať: " + multiplaier115;
 
     document.getElementById("text").innerHTML ="Máš " + spsmb  + " SPS Kokiez";
     document.title = spsmb;
@@ -91,7 +91,8 @@ function resetbutton(){
     tlacitko = 0;
     multiplaier115 = 50* Math.pow(1.15,multiplaierpocet);
     document.getElementById("text").innerHTML ="Máš " + spsmb  + " SPS Kokiez";
-    document.getElementById("multiplaierpocet").innerHTML = "Multiplaier 2x <br> Vlastněno: " +  multiplaierpocet;
+    document.getElementById("multiplaierpocet").innerHTML = "Multiplaier 2x <br> Vlastněno: " +  multiplaierpocet + "<br>" + "Zaplať: " + multiplaier115;
+
 
 
 }
