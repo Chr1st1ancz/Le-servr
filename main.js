@@ -18,9 +18,9 @@ document.addEventListener("keypress", onkeydown);
             multiplaier1 = multiplaier1 * 2;
             multiplaierpocet += 1;
             multiplaier115 = 50* Math.pow(1.15,multiplaierpocet);
-            document.getElementById("text").value = Math.round(spsmb);
+            document.getElementById("text").innerHTML = "Máš " + Math.round(spsmb) + " SPS Kokiez";
             document.title = spsmb;
-            document.getElementById("multiplaierpocet").value = multiplaierpocet;
+            document.getElementById("multiplaierpocet").innerHTML = "Multiplaier 2x <br> Vlastněno: " +  multiplaierpocet;
         }
     }
 
@@ -31,7 +31,7 @@ document.addEventListener("keypress", onkeydown);
     function onkeydown() {
         if(tlacitko==0) {
             if(spsmb>49) {
-                document.getElementById("text").value =spsmb;
+                document.getElementById("text").innerHTML ="Máš " + spsmb + " SPS Kokiez";
                 document.title = spsmb;
                 tlacitko = 1;
                 spsmb += -49;
@@ -40,7 +40,7 @@ document.addEventListener("keypress", onkeydown);
         }
         else{
             spsmb += multiplaier1;
-            document.getElementById("text").value=spsmb;
+            document.getElementById("text").innerHTML ="Máš " + spsmb + " SPS Kokiez";
             document.title = spsmb;
         }
 
@@ -51,23 +51,48 @@ document.addEventListener("keypress", onkeydown);
 
     function plussusenky(){
         spsmb += multiplaier1;
-        document.getElementById("text").value = Math.round(spsmb);
-        document.title = spsmb;
+        document.getElementById("text").innerHTML = "Máš " + Math.round(spsmb) + " SPS Kokiez";
+        document.title = Math.round(spsmb);
 
 
     }
 
 setInterval(ulozit,1000)
 function ulozit(){
-
     localStorage.setItem("spsmb", spsmb);
+    localStorage.setItem("multiplaier1", multiplaier1);
+    localStorage.setItem("multiplaier115", multiplaier115);
+    localStorage.setItem("tlacitko", tlacitko);
+    localStorage.setItem("multiplaierpocet", multiplaierpocet);
 
 }
-window.onload = function(){
+window.onload = function nacist(){
     spsmb = localStorage.getItem("spsmb");
     spsmb = parseInt(spsmb);
-    document.getElementById("text").value = spsmb;
+    multiplaier1 = localStorage.getItem("multiplaier1");
+    multiplaier1 = parseInt(multiplaier1);
+    tlacitko = localStorage.getItem("tlacitko");
+    tlacitko = parseInt(tlacitko);
+    multiplaierpocet = localStorage.getItem("multiplaierpocet");
+    multiplaierpocet = parseInt(multiplaierpocet);
+    multiplaier115 = localStorage.getItem("multiplaier115");
+    multiplaier115 = parseInt(multiplaier115);
+    document.getElementById("multiplaierpocet").innerHTML = "Multiplaier 2x <br> Vlastněno: " +  multiplaierpocet;
+
+    document.getElementById("text").innerHTML ="Máš " + spsmb  + " SPS Kokiez";
     document.title = spsmb;
+
+}
+function resetbutton(){
+        localStorage.clear();
+        spsmb = 0;
+    multiplaier1 = 1;
+    multiplaierpocet = 0;
+    tlacitko = 0;
+    multiplaier115 = 50* Math.pow(1.15,multiplaierpocet);
+    document.getElementById("text").innerHTML ="Máš " + spsmb  + " SPS Kokiez";
+    document.getElementById("multiplaierpocet").innerHTML = "Multiplaier 2x <br> Vlastněno: " +  multiplaierpocet;
+
 
 }
 

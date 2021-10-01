@@ -8,26 +8,22 @@
 </head>
 <body>
 <div class="nadpis">
-<h1>SPSMB KOKIZ CLICKER</h1>
+<h1 class="posunutidoleva">SPSMB KOKIZ CLICKER</h1>
 </div>
 <div class="stredobrazku">
-<div id="animacia"><img src="obrazky/till.png" draggable="false" onclick="plussusenky()"><br></div>
+<div id="animacia" class="posunutidoprava"><img src="obrazky/till.png" draggable="false" onclick="plussusenky()"><br></div>
 </div>
 
 <div class="left">
-Máš
 
-    <input type="text" id="text" disabled style="text-align:center">
 
-Tillů.
+    <div id="text" style="text-align:center" class="#text">Máš SPS Kokiz </div>
+
+
 </div>
-<div class="right">
-<button><a href='#' onClick="multiplaier()" id="multiplaierpocet">Multiplaier 2x </a> </button>
-
-
-
-<button><a href='#' onClick="onkeydown()">Držení tlačítka</a> </button>
-    </div>
+<a class="button" href='#' onClick="multiplaier()" id="multiplaierpocet" style="text-decoration: none">Multiplaier 2x </a>
+<a class="button" href='#' onClick="onkeydown()" style="text-decoration: none">Držení tlačítka</a>
+<a class="button" href='#' onClick="resetbutton()" style="text-decoration: none">Resetovat Kokiez</a>
 
 <script src="main.js" type="text/javascript">
 
