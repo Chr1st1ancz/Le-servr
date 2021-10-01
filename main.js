@@ -1,17 +1,26 @@
 
-let spsmb = 0;
-let multiplaier1 = 1;
-let keyhack = 0
-let tlacitko = 0;
+let spsmb = 0; /*susenky ano*/
+let multiplaier1 = 1; /*nasobic kliku*/
+let multiplaierpocet = 0; /*vlastneno ano*/
+let tlacitko = 0; /*promenna na onkeydown*/
+let multiplaier115 = 50* Math.pow(1.15,multiplaierpocet); /**/
+
+
+
 document.addEventListener("keypress", onkeydown);
 
 
+
     function multiplaier() {
-        if (spsmb >= 49) { /*upravit ceny*/
-            spsmb += -49;
-            multiplaier1 = multiplaier1 + 1;
-            document.getElementById("text").value = spsmb;
+        if (spsmb >= multiplaier115) { /*upravit ceny*/
+
+            spsmb += -multiplaier115;
+            multiplaier1 = multiplaier1 * 2;
+            multiplaierpocet += 1;
+            multiplaier115 = 50* Math.pow(1.15,multiplaierpocet);
+            document.getElementById("text").value = Math.round(spsmb);
             document.title = spsmb;
+            document.getElementById("multiplaierpocet").value = multiplaierpocet;
         }
     }
 
@@ -22,7 +31,7 @@ document.addEventListener("keypress", onkeydown);
     function onkeydown() {
         if(tlacitko==0) {
             if(spsmb>49) {
-                document.getElementById("text").value = spsmb;
+                document.getElementById("text").value =spsmb;
                 document.title = spsmb;
                 tlacitko = 1;
                 spsmb += -49;
@@ -31,7 +40,7 @@ document.addEventListener("keypress", onkeydown);
         }
         else{
             spsmb += multiplaier1;
-            document.getElementById("text").value = spsmb;
+            document.getElementById("text").value=spsmb;
             document.title = spsmb;
         }
 
@@ -42,21 +51,24 @@ document.addEventListener("keypress", onkeydown);
 
     function plussusenky(){
         spsmb += multiplaier1;
-        document.getElementById("text").value = spsmb;
+        document.getElementById("text").value = Math.round(spsmb);
         document.title = spsmb;
+
 
     }
 
 setInterval(ulozit,1000)
 function ulozit(){
+
     localStorage.setItem("spsmb", spsmb);
 
 }
 window.onload = function(){
     spsmb = localStorage.getItem("spsmb");
-    spsmb = parseInt(spsmb); /*finally to nespamuje misto pricitani jednicky lmao*/
+    spsmb = parseInt(spsmb);
     document.getElementById("text").value = spsmb;
     document.title = spsmb;
+
 }
 
 

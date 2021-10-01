@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    background-image: url("obrazky/spsmb_101.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    user-select: none;
+    background-position: center;
+    height: 100%;
+}
+.stredobrazku{
+   text-align: center;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+.nadpis {
+    text-align: center;
+    font-family: Calibri;
+    background: azure;
+    color: black;
+    padding: 1.5%;
+    font-size: 30px;
+}
+.left{
+    float: left;
+
+}
+.right{
+    float: right;
+
+}
+
+#animacia img:hover{
+    transform: scale(1.01);
+}
+#animacia img:active{
+    transform: scale(0.98);
+}
+
