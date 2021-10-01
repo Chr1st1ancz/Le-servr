@@ -3,7 +3,8 @@ let spsmb = 0;
 let multiplaier1 = 1;
 let keyhack = 0
 let tlacitko = 0;
-document.addEventListener("keypress", onkeypress);
+document.addEventListener("keypress", onkeydown);
+
 
     function multiplaier() {
         if (spsmb >= 49) { /*upravit ceny*/
@@ -16,17 +17,25 @@ document.addEventListener("keypress", onkeypress);
 
 
 /*funkce na autorun na sipku dolu nejdrazsi, pridat if a buy menu*/
-    function onkeypress() {
-        if(spsmb>49) {
-            tlacitko = 1;
-            spsmb += -49;
-        }
-        if(tlacitko>0) {
 
+
+    function onkeydown() {
+        if(tlacitko==0) {
+            if(spsmb>49) {
+                document.getElementById("text").value = spsmb;
+                document.title = spsmb;
+                tlacitko = 1;
+                spsmb += -49;
+
+            }
+        }
+        else{
             spsmb += multiplaier1;
             document.getElementById("text").value = spsmb;
             document.title = spsmb;
         }
+
+
 
 
     }
@@ -43,10 +52,11 @@ function ulozit(){
     localStorage.setItem("spsmb", spsmb);
 
 }
-function nacist(){
+window.onload = function(){
     spsmb = localStorage.getItem("spsmb");
     spsmb = parseInt(spsmb); /*finally to nespamuje misto pricitani jednicky lmao*/
     document.getElementById("text").value = spsmb;
     document.title = spsmb;
-
 }
+
+
