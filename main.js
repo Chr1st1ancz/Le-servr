@@ -157,7 +157,7 @@ function resetbutton(){
         cenaAutoKliq = 30;
         document.getElementById("text").innerHTML ="Máš " + spsmb  + " SPS Kokiez";
         document.getElementById("AutoKliq").innerHTML = "<img src=\"obrazky/mr.catia.png\" draggable=\"false\"> <br>Mr.Catia<br>+1SKPS" + " <br> Vlastněno: " + AutoKliqPocet + " <br> Zaplať: " + Math.round(cenaAutoKliq);
-        document.getElementById("multiplaierpocet").innerHTML = "<img src=\"obrazky/esch2.png\" draggable=\"false\" style=\"width: 7vw\"><br>Mr.Doutníčkář <br>Multiplier x" + multiplaier1 + "<br> Vlastněno: " +  multiplaierpocet + "<br>" + "Zaplať: " + Math.round(multiplaier115);
+        document.getElementById("multiplaierpocet").innerHTML = "<img src=\"obrazky/esch2.png\" draggable=\"false\" style=\"width: 7vw\"><br>Mr.Doutníčkář <br>IP Adresy Multiplier x" + multiplaier1 + "<br> Vlastněno: " +  multiplaierpocet + "<br>" + "Zaplať: " + Math.round(multiplaier115);
 
 
 
