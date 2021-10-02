@@ -27,6 +27,7 @@ function plussusenky(){
     spsmb += multiplaier1;
     document.getElementById("text").innerHTML = "Máš " + Math.round(spsmb) + " SPS Kokiez";
     document.title = Math.round(spsmb);
+    document.title = spsmb;
 
 }
 
@@ -42,7 +43,7 @@ function plussusenky(){
             document.getElementById("text").innerHTML = "Máš " + Math.round(spsmb) + " SPS Kokiez";
             document.title = spsmb;
             document.getElementById("multiplaierpocet").innerHTML = " <img src=\"obrazky/esch2.png\" draggable=\"false\" style=\"width: 7vw\"> <br>Mr.Doutníčkář <br> IP Adresy Multiplier x" + multiplaier1 + " <br> Vlastněno: " +  multiplaierpocet + "<br>" + "Zaplať: " + Math.round(multiplaier115);
-            var audio = new Audio('./obrazky/IPAdresy.mp3');
+            let audio = new Audio('./obrazky/IPAdresy.mp3');
             audio.play();
         }
     }
@@ -78,6 +79,7 @@ function plussusenky(){
                 cenaAutoKliq = 30 * Math.pow(1.15, AutoKliqPocet);
                 document.getElementById("text").innerHTML = "Máš " + Math.round(spsmb) + " SPS Kokiez";
             document.getElementById("AutoKliq").innerHTML = "<img src=\"obrazky/mr.catia.png\" draggable=\"false\"> <br>Mr.Catia <br>+1SKPS" + " <br> Vlastněno: " + AutoKliqPocet + " <br> Zaplať: " + Math.round(cenaAutoKliq);
+            document.title = spsmb;
 
 
         }
@@ -86,6 +88,7 @@ setInterval(AutoKliq, 1000)
 function AutoKliq(){
     spsmb+= AutoKliqPocet;
     document.getElementById("text").innerHTML = "Máš " + Math.round(spsmb) + " SPS Kokiez";
+    document.title = spsmb;
 }
 
 setInterval(ulozit,1000)
