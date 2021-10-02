@@ -103,6 +103,7 @@ function ulozit(){
 }
 window.onload = function nacist(){
     if (localStorage.length > 0){
+
         spsmb = localStorage.getItem("spsmb");
         spsmb = parseInt(spsmb);
         multiplaier1 = localStorage.getItem("multiplaier1");
