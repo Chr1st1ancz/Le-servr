@@ -14,6 +14,12 @@ body{
     text-decoration: none;
     overflow: hidden;
 }
+.a div img{
+    width: 5vw;
+}
+audio {
+    display:none;
+}
 
 .button{
     text-align: center;
@@ -69,6 +75,7 @@ a img{
 .button2 img{
     width: 5vw;
 }
+
 
 
 
