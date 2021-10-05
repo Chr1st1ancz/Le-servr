@@ -39,7 +39,7 @@ function multiplaier() {
         multiplaier115 = 1000 * Math.pow(2.5, multiplaierpocet);
         document.getElementById("text").innerHTML = "Máš " + Math.round(spsmb) + " SPS Kokiez";
         document.title = spsmb;
-        document.getElementById("multiplaierpocet").innerHTML = " <img src=\"obrazky/esch2.png\" draggable=\"false\" style=\"width: 7vw\"> <br>Mr.Doutníčkář <br> IP Adresy Multiplier x" + multiplaier1 + " <br> Vlastněno: " + multiplaierpocet + "<br>" + "Zaplať: " + Math.round(multiplaier115);
+        document.getElementById("multiplaierpocet").innerHTML = " <img src=\"obrazky/esch2.png\" draggable=\"false\" style=\"width: 7vw\"> <br>Mr.Doutníčkář <br> Rozsah IP sítě: " + multiplaier1 + " <br> Vlastněno: " + multiplaierpocet + "<br>" + "Zaplať: " + Math.round(multiplaier115);
         let audio = new Audio('./obrazky/IPAdresy.mp3');
         audio.play();
     }
@@ -149,7 +149,7 @@ window.onload = function nacist() {
         cenaAutoKliq20 = parseInt(cenaAutoKliq20);
         AutoKliqPocet20 = localStorage.getItem("AutoKliqPocet20");
         AutoKliqPocet20 = parseInt(AutoKliqPocet20);
-        document.getElementById("multiplaierpocet").innerHTML = "<img src=\"obrazky/esch2.png\" draggable=\"false\" style=\"width: 7vw\"><br>Mr.Doutníčkář <br>IP Adresy Multiplier x" + multiplaier1 + "<br> Vlastněno: " + multiplaierpocet + "<br>" + "Zaplať: " + Math.round(multiplaier115);
+        document.getElementById("multiplaierpocet").innerHTML = "<img src=\"obrazky/esch2.png\" draggable=\"false\" style=\"width: 7vw\"><br>Mr.Doutníčkář <br>Rozsah IP sítě: " + multiplaier1 + "<br> Vlastněno: " + multiplaierpocet + "<br>" + "Zaplať: " + Math.round(multiplaier115);
         document.getElementById("AutoKliq").innerHTML = "<img src=\"obrazky/mr.catia.png\" draggable=\"false\"> <br>Mr.Catia <br>+1SKPS" + " <br> Vlastněno: " + AutoKliqPocet + " <br> Zaplať: " + Math.round(cenaAutoKliq);
         document.getElementById("AutoKliq5").innerHTML = "<img src=\"obrazky/vofrk.png\" draggable=\"false\"> <br>Mr.VOFRK <br>+5SKPS" + " <br> Vlastněno: " + AutoKliqPocet5 + " <br> Zaplať: " + Math.round(cenaAutoKliq5);
         document.getElementById("AutoKliq20").innerHTML = "<img src=\"obrazky/zabicka.png\" draggable=\"false\"> <br>Mrs.Žabička <br>+20SKPS" + " <br> Vlastněno: " + AutoKliqPocet20 + " <br><br>  Zaplať: " + Math.round(cenaAutoKliq20);
@@ -169,7 +169,7 @@ window.onload = function nacist() {
         localStorage.setItem("AutoKliqPocet20", AutoKliqPocet20);
         document.getElementById("text").innerHTML = "Máš " + spsmb + " SPS Kokiez";
         document.getElementById("AutoKliq").innerHTML = "<img src=\"obrazky/mr.catia.png\" draggable=\"false\"> <br>Mr.Catia<br>+1SKPS" + " <br> Vlastněno: " + AutoKliqPocet + " <br> Zaplať: " + Math.round(cenaAutoKliq);
-        document.getElementById("multiplaierpocet").innerHTML = "<img src=\"obrazky/esch2.png\" draggable=\"false\" style=\"width: 7vw\"><br>Mr.Doutníčkář <br>IP Adresy Multiplier x" + multiplaier1 + "<br> Vlastněno: " + multiplaierpocet + "<br>" + "Zaplať: " + Math.round(multiplaier115);
+        document.getElementById("multiplaierpocet").innerHTML = "<img src=\"obrazky/esch2.png\" draggable=\"false\" style=\"width: 7vw\"><br>Mr.Doutníčkář <br>Rozsah IP sítě: " + multiplaier1 + "<br> Vlastněno: " + multiplaierpocet + "<br>" + "Zaplať: " + Math.round(multiplaier115);
         document.getElementById("AutoKliq5").innerHTML = "<img src=\"obrazky/vofrk.png\" draggable=\"false\"> <br>Mr.VOFRK <br>+5SKPS" + " <br> Vlastněno: " + AutoKliqPocet5 + " <br> Zaplať: " + Math.round(cenaAutoKliq5);
         document.getElementById("AutoKliq20").innerHTML = "<img src=\"obrazky/zabicka.png\" draggable=\"false\"> <br>Mrs.Žabička <br>+20SKPS" + " <br> Vlastněno: " + AutoKliqPocet20 + " <br><br>  Zaplať: " + Math.round(cenaAutoKliq20);
 
@@ -192,7 +192,7 @@ function resetbutton() {
     AutoKliqPocet20 = 0;
     document.getElementById("text").innerHTML = "Máš " + spsmb + " SPS Kokiez";
     document.getElementById("AutoKliq").innerHTML = "<img src=\"obrazky/mr.catia.png\" draggable=\"false\"> <br>Mr.Catia<br>+1SKPS" + " <br> Vlastněno: " + AutoKliqPocet + " <br> Zaplať: " + Math.round(cenaAutoKliq);
-    document.getElementById("multiplaierpocet").innerHTML = "<img src=\"obrazky/esch2.png\" draggable=\"false\" style=\"width: 7vw\"><br>Mr.Doutníčkář <br>IP Adresy Multiplier x" + multiplaier1 + "<br> Vlastněno: " + multiplaierpocet + "<br>" + "Zaplať: " + Math.round(multiplaier115);
+    document.getElementById("multiplaierpocet").innerHTML = "<img src=\"obrazky/esch2.png\" draggable=\"false\" style=\"width: 7vw\"><br>Mr.Doutníčkář <br>Rozsah IP sítě: " + multiplaier1 + "<br> Vlastněno: " + multiplaierpocet + "<br>" + "Zaplať: " + Math.round(multiplaier115);
     document.getElementById("AutoKliq5").innerHTML = "<img src=\"obrazky/vofrk.png\" draggable=\"false\"> <br>Mr.VOFRK <br>+5SKPS" + " <br> Vlastněno: " + AutoKliqPocet5 + " <br> Zaplať: " + Math.round(cenaAutoKliq5);
     document.getElementById("AutoKliq20").innerHTML = "<img src=\"obrazky/zabicka.png\" draggable=\"false\"> <br>Mrs.Žabička <br>+20SKPS" + " <br> Vlastněno: " + AutoKliqPocet20 + " <br><br>  Zaplať: " + Math.round(cenaAutoKliq20);
     /* window.location.href = "index.html";*/
