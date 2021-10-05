@@ -2,7 +2,8 @@
 /*Rozsvítí se buy tlačítko když na to máš peňáze*/
 /*Dat stepanovou do okna a jak mele odkaz v odkazu a pak rickroll ez*/
 /*Převést všechny innerHTML z různých funnkcí do jedné funkce na výpis*/
-
+/*Math round na title*/
+/**/
 
 let spsmb = 0; /*susenky ano*/
 let multiplaier1 = 1; /*nasobic kliku*/
